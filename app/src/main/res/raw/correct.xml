@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Placeholder: Replace with actual correct.mp3 sound file -->
+<!-- For now, app will use system notification sound -->
+<resources>
+    <item name="correct" type="raw">@android:raw/notification_sound</item>
+</resources>

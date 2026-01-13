@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ============================================== -->
+    <!-- DESIGN SYSTEM - Dark Mode Colors               -->
+    <!-- ============================================== -->
+    
+    <!-- === Base Colors (Inverted) === -->
+    <color name="black">#E8E8E8</color>
+    <color name="white">#121212</color>
+    <color name="background">#1A1A2E</color>
+    <color name="surface">#16213E</color>
+    <color name="surface_variant">#0F3460</color>
+    
+    <!-- === Primary Palette (Brighter for dark) === -->
+    <color name="primary">#A29BFE</color>
+    <color name="primary_light">#DDD6FE</color>
+    <color name="primary_dark">#7C4DFF</color>
+    <color name="on_primary">#121212</color>
+    
+    <!-- === Secondary Palette === -->
+    <color name="accent_pink">#FF9FF3</color>
+    <color name="accent_cyan">#48DBFB</color>
+    
+    <!-- === Game Answer Colors (Brighter) === -->
+    <color name="answer_red">#FF6B6B</color>
+    <color name="answer_blue">#74B9FF</color>
+    <color name="answer_yellow">#FFEAA7</color>
+    <color name="answer_green">#55EFC4</color>
+    
+    <!-- === Feedback Colors === -->
+    <color name="success">#00D9A0</color>
+    <color name="success_light">#81ECEC</color>
+    <color name="error">#FF7675</color>
+    <color name="error_light">#FAB1A0</color>
+    <color name="warning">#FDCB6E</color>
+    <color name="warning_light">#FFEAA7</color>
+    
+    <!-- === Text Colors === -->
+    <color name="text_primary">#F5F6FA</color>
+    <color name="text_secondary">#A4B0BE</color>
+    <color name="text_hint">#636E72</color>
+    <color name="text_on_dark">#FFFFFF</color>
+    
+    <!-- === Shadows & Overlays === -->
+    <color name="shadow">#40000000</color>
+    <color name="overlay">#CC000000</color>
+    
+    <!-- === Legacy Kahoot Colors === -->
+    <color name="kahoot_red">@color/answer_red</color>
+    <color name="kahoot_blue">@color/answer_blue</color>
+    <color name="kahoot_yellow">@color/answer_yellow</color>
+    <color name="kahoot_green">@color/answer_green</color>
+    <color name="kahoot_purple">@color/primary</color>
+    <color name="kahoot_purple_dark">@color/primary_dark</color>
+    <color name="gray">@color/text_secondary</color>
+    <color name="secondary">@color/accent_pink</color>
+    <color name="on_secondary">@color/white</color>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="@dimen/spacing_lg"
+    android:background="@color/background">
+
+    <!-- Spacer to push content to center -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Logo Container -->
+    <FrameLayout
+        android:layout_width="@dimen/logo_size"
+        android:layout_height="@dimen/logo_size"
+        android:layout_marginBottom="@dimen/spacing_lg">
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_logo_circle"
+            android:elevation="@dimen/elevation_md"/>
+        
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/icon_xl"
+            android:layout_height="@dimen/icon_xl"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_question_mark"
+            android:contentDescription="Logo"
+            tools:ignore="ContentDescription"/>
+    </FrameLayout>
+
+    <!-- App Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BrainBlitz"
+        android:textSize="@dimen/text_xxl"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:letterSpacing="0.05"
+        android:layout_marginBottom="@dimen/spacing_xs"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Myśl szybko, zdobywaj punkty!"
+        android:textSize="@dimen/text_md"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="@dimen/spacing_xxl"/>
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Buttons Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/spacing_md">
+
+        <Button
+            android:id="@+id/btn_play"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_lg"
+            android:text="GRAJ"
+            android:textSize="@dimen/text_lg"
+            android:textStyle="bold"
+            android:textColor="@color/on_primary"
+            android:background="@drawable/bg_button_primary"
+            android:elevation="@dimen/elevation_md"
+            android:layout_marginBottom="@dimen/spacing_md"
+            android:letterSpacing="0.1"/>
+
+        <Button
+            android:id="@+id/btn_options"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_md"
+            android:text="Opcje"
+            android:textSize="@dimen/text_md"
+            android:textColor="@color/text_primary"
+            android:background="@drawable/bg_button_secondary"
+            android:layout_marginBottom="@dimen/spacing_xl"/>
+    </LinearLayout>
+
+</LinearLayout>

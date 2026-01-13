@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/spacing_sm"
+    android:layout_marginVertical="@dimen/spacing_xs"
+    app:cardCornerRadius="@dimen/radius_md"
+    app:cardElevation="@dimen/elevation_sm"
+    app:cardBackgroundColor="@color/surface"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/spacing_md">
+
+        <!-- Category Icon -->
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="@dimen/spacing_md">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_logo_circle"/>
+
+            <TextView
+                android:id="@+id/tv_category_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="📚"
+                android:textSize="20sp"
+                android:gravity="center"/>
+        </FrameLayout>
+
+        <!-- Category Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_category_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category Name"
+                android:textSize="@dimen/text_lg"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"/>
+
+            <TextView
+                android:id="@+id/tv_category_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8 pytań"
+                android:textSize="@dimen/text_sm"
+                android:textColor="@color/text_secondary"/>
+        </LinearLayout>
+
+        <!-- Checkbox Indicator -->
+        <ImageView
+            android:id="@+id/iv_checkbox"
+            android:layout_width="@dimen/icon_md"
+            android:layout_height="@dimen/icon_md"
+            android:src="@android:drawable/checkbox_off_background"
+            android:contentDescription="Wybierz"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

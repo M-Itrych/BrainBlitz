@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="@dimen/spacing_lg"
+    android:background="@color/background">
+
+    <!-- Performance Emoji -->
+    <TextView
+        android:id="@+id/tv_emoji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🏆"
+        android:textSize="80sp"
+        android:layout_marginBottom="@dimen/spacing_md"
+        android:contentDescription="Performance icon"/>
+
+    <!-- Result Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_lg"
+        app:cardCornerRadius="@dimen/radius_xl"
+        app:cardElevation="@dimen/elevation_md"
+        app:cardBackgroundColor="@color/surface">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_lg"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Koniec Gry!"
+                android:textSize="@dimen/text_xxl"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="@dimen/spacing_md"/>
+
+            <TextView
+                android:id="@+id/tv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Poprawne: 8/10"
+                android:textSize="@dimen/text_lg"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="@dimen/spacing_sm"/>
+
+            <TextView
+                android:id="@+id/tv_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1500 pkt"
+                android:textSize="@dimen/text_display"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:layout_marginBottom="@dimen/spacing_md"/>
+
+            <!-- Stats Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- Streak Stat -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_sm">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔥"
+                        android:textSize="@dimen/text_xl"/>
+
+                    <TextView
+                        android:id="@+id/tv_streak_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textSize="@dimen/text_xl"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Streak"
+                        android:textSize="@dimen/text_sm"
+                        android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="48dp"
+                    android:background="@color/surface_variant"/>
+
+                <!-- Time Stat -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_sm">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⏱"
+                        android:textSize="@dimen/text_xl"/>
+
+                    <TextView
+                        android:id="@+id/tv_avg_time_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.2s"
+                        android:textSize="@dimen/text_xl"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Śr. czas"
+                        android:textSize="@dimen/text_sm"
+                        android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/spacing_sm">
+
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_md"
+            android:text="📤 Udostępnij"
+            android:textSize="@dimen/text_md"
+            android:textColor="@color/primary"
+            android:backgroundTint="@color/surface_variant"
+            app:cornerRadius="@dimen/radius_lg"
+            android:layout_marginBottom="@dimen/spacing_sm"/>
+
+        <Button
+            android:id="@+id/btn_play_again"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_lg"
+            android:text="🔄 Zagraj ponownie"
+            android:textSize="@dimen/text_lg"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary"
+            app:cornerRadius="@dimen/radius_lg"
+            android:layout_marginBottom="@dimen/spacing_sm"/>
+
+        <Button
+            android:id="@+id/btn_main_menu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_md"
+            android:text="🏠 Menu główne"
+            android:textSize="@dimen/text_md"
+            android:textColor="@color/text_secondary"
+            style="?attr/borderlessButtonStyle"/>
+    </LinearLayout>
+
+</LinearLayout>

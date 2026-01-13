@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_md">
+
+        <!-- Timer Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/spacing_md"
+            android:layout_marginBottom="@dimen/spacing_sm">
+            
+            <TextView
+                android:id="@+id/tv_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textSize="@dimen/text_timer"
+                android:textStyle="bold"
+                android:textColor="@color/success"/>
+
+            <TextView
+                android:id="@+id/tv_streak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔥 Streak: 0"
+                android:textSize="@dimen/text_lg"
+                android:textStyle="bold"
+                android:textColor="@color/warning"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+        <!-- Question Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/spacing_md"
+            app:cardCornerRadius="@dimen/radius_xl"
+            app:cardElevation="@dimen/elevation_md"
+            app:cardBackgroundColor="@color/surface"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Ładowanie..."
+                android:textSize="@dimen/text_xl"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:gravity="center"
+                android:padding="@dimen/spacing_lg"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Answers Grid -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/spacing_sm">
+
+                <Button
+                    android:id="@+id/btn_answer_1"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/spacing_xs"
+                    android:backgroundTint="@color/answer_red"
+                    android:text="A"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_md"
+                    android:textStyle="bold"
+                    app:cornerRadius="@dimen/radius_md"/>
+
+                <Button
+                    android:id="@+id/btn_answer_2"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/spacing_xs"
+                    android:backgroundTint="@color/answer_blue"
+                    android:text="B"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_md"
+                    android:textStyle="bold"
+                    app:cornerRadius="@dimen/radius_md"/>
+            </LinearLayout>
+
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/spacing_md">
+
+                <Button
+                    android:id="@+id/btn_answer_3"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/spacing_xs"
+                    android:backgroundTint="@color/answer_yellow"
+                    android:text="C"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_md"
+                    android:textStyle="bold"
+                    app:cornerRadius="@dimen/radius_md"/>
+
+                <Button
+                    android:id="@+id/btn_answer_4"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/spacing_xs"
+                    android:backgroundTint="@color/answer_green"
+                    android:text="D"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_md"
+                    android:textStyle="bold"
+                    app:cornerRadius="@dimen/radius_md"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Full Screen Feedback Overlay -->
+    <LinearLayout
+        android:id="@+id/layout_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:elevation="10dp">
+
+        <TextView
+            android:id="@+id/tv_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DOBRZE!"
+            android:textSize="@dimen/text_display"
+            android:textStyle="bold"
+            android:textColor="@color/text_on_dark"/>
+    </LinearLayout>
+
+</FrameLayout>
